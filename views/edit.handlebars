@@ -1,0 +1,90 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Editar Manual</h1>
+    </div>
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Editar</h5>
+
+                        <div class="alert alert-success alert-dismissible fade show" role="alert" id="successCreateMsg" style="display: none;">
+                            <i class="bi bi-check-circle me-1"></i>
+                            Editado com Sucesso!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="errorCreateMsg" style="display: none;">
+                            <h4 class="alert-heading">Erro durante edição</h4>
+                            <p>Verifique as mensagens de erro:</p>
+                            <hr>
+                            <ul id="errorList"></ul>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+                        <!-- General Form Elements -->
+                        <form>
+                            <div class="row mb-3">
+                                <label for="manualName" class="col-sm-2 col-form-label">Nome</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="manualName" value="{{manual.name}}">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="manufacturer" class="col-sm-2 col-form-label">Marca</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="manufacturer" value="{{manual.manufacturer}}">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="model" class="col-sm-2 col-form-label">Modelo</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="model" value="{{manual.model}}">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="type" class="col-sm-2 col-form-label">Tipo</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="type" value="{{manual.type}}">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="manualLink" class="col-sm-2 col-form-label">Link</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="manualLink" value="{{manual.link}}">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <legend class="col-form-label col-sm-2 pt-0">Acesso</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="restrictedAccess" {{#if manual.isRestricted}}checked{{/if}}>
+                                        <label class="form-check-label" for="restrictedAccess">Acesso Restrito</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <button type="button" class="btn btn-primary"  onclick="updateManual('{{manual._id}}')">Atualizar Manual</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>

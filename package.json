@@ -1,0 +1,35 @@
+{
+  "name": "consulta-manuais",
+  "version": "1.0.0",
+  "description": "Consulta Manuais HC UFU",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app/app.js",
+    "dev": "nodemon -L app/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliaMP28/consulta-manuais.git"
+  },
+  "author": "Julia Martins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuliaMP28/consulta-manuais/issues"
+  },
+  "homepage": "https://github.com/JuliaMP28/consulta-manuais#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "config": "^3.3.9",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
